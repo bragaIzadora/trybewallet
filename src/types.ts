@@ -10,7 +10,7 @@ export type Expenses = {
   currency: string,
   method: string,
   tag: string,
-  exchangeRates: { [key: string]: { ask: string } },
+  exchangeRates: { [key: string]: { ask: string; name?: string } },
 };
 
 export type WalletType = {

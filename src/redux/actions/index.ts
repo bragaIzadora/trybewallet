@@ -12,19 +12,9 @@ export const setEmail = (email: string) => ({
   payload: email,
 });
 
-export const setCurrencies = (currencies: string[]) => ({
-  type: SET_CURRENCIES,
-  currencies,
-});
-
 export const setExpenses = (expenses: Expenses) => ({
   type: SET_EXPENSES,
   expenses,
-});
-
-export const setDescription = (description: string) => ({
-  type: SET_DESCRIPTION,
-  description,
 });
 
 export const setMethod = (method: string) => ({
@@ -32,7 +22,22 @@ export const setMethod = (method: string) => ({
   method,
 });
 
+export const setDescription = (description: string) => ({
+  type: SET_DESCRIPTION,
+  description,
+});
+
+export const setCurrencies = (currencies: string[]) => ({
+  type: SET_CURRENCIES,
+  currencies,
+});
+
 export const setTag = (tag: string) => ({
   type: SET_TAG,
   tag,
+});
+
+export const Delete = (expenses:Expenses[]) => ({
+  type: 'DELETE_EXPENSES',
+  payload: expenses,
 });
