@@ -6,7 +6,7 @@ function Header() {
   const userEmail = useSelector((state: any) => state.user.email);
   const { expenses } = useSelector((state: GlobalState) => state.wallet as WalletType);
 
-  const totalExpenses = expenses.reduce((acc, curr) => {
+  const totalEx = expenses.reduce((acc, curr) => {
     const { value, currency, exchangeRates } = curr;
     const rate = exchangeRates[currency].ask;
     return acc + (parseFloat(value) * parseFloat(rate));
@@ -18,7 +18,7 @@ function Header() {
         Email:
         {userEmail}
       </div>
-      <div data-testid="total-field">{ totalExpenses.toFixed(2) }</div>
+      <div data-testid="total-field">{ totalEx.toFixed(2) }</div>
       <div data-testid="header-currency-field">BRL</div>
     </div>
   );
